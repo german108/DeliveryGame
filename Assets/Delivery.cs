@@ -6,7 +6,8 @@ public class Delivery : MonoBehaviour
 {
     [SerializeField] Color32 hasPackageColor = new Color32 (1,1,1,1);
     [SerializeField] Color32 noPackageColor = new Color32 (0,1,0,1);
-    [SerializeField] float destoryDelay = 0.5f;
+    [SerializeField] float destoryDelay = 0.1f;
+    
     bool hasPackage;
     SpriteRenderer spriteRenderer;
 
@@ -28,7 +29,7 @@ public class Delivery : MonoBehaviour
         Debug.Log("Package picked up");
         hasPackage = true;
         spriteRenderer.color = hasPackageColor;
-        Destroy(other.gameObject,destoryDelay);
+        Destroy(other.gameObject,0.1f);
         
         
         
